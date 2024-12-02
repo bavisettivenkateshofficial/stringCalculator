@@ -11,4 +11,10 @@ describe('Calculator', () => {
 
     expect(actual).toBe(5);
   });
+
+  it('should return addition of numbers when we pass numbers in comma separated values', () => {
+    const actual = add('5,6,7');
+
+    expect(actual).toBe(18);
+  });
 });
