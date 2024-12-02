@@ -29,4 +29,8 @@ describe('Calculator', () => {
 
     expect(actual).toBe(22);
   });
+
+  it('should throw exception if there is any negative numbers', () => {
+    expect(() => add('//;\n4,5,-6,-7')).toThrow('negative numbers not allowed -6,-7');
+  });
 });
