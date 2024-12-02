@@ -17,4 +17,10 @@ describe('Calculator', () => {
 
     expect(actual).toBe(18);
   });
+
+  it('should return addition of numbers when we pass numbers in comma separated or new lines values', () => {
+    const actual = add('5\n6,7');
+
+    expect(actual).toBe(18);
+  });
 });
