@@ -18,9 +18,15 @@ describe('Calculator', () => {
     expect(actual).toBe(18);
   });
 
-  it('should return addition of numbers when we pass numbers in comma separated or new lines values', () => {
+  it('should return addition of numbers when we pass numbers in comma or new lines separated values', () => {
     const actual = add('5\n6,7');
 
     expect(actual).toBe(18);
+  });
+
+  it('should return addition of numbers when we pass numbers in delimiters separated values', () => {
+    const actual = add('//;\n4,5,6,7');
+
+    expect(actual).toBe(22);
   });
 });
